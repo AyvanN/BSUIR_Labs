@@ -1,0 +1,10 @@
+{% extends "cars/offers.html" %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumb" class="mt-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'cars:offers' %}">Cars</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ mark }}</a></li>
+    </ol>
+</nav>
+{% endblock %}

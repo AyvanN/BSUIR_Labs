@@ -1,0 +1,13 @@
+Django
+psycopg2
+Pillow
+PyYaml
+django-crispy-forms
+pytest-django
+Coverage
+pytest
+mixer
+pytest-cov
+pytest-xdist
+djangorestframework
+gunicorn

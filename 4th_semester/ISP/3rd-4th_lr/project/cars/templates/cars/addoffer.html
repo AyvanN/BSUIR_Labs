@@ -1,0 +1,18 @@
+{% extends "cars/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="row" style="margin-bottom: 300px; margin-top: 180px;">
+    <div class="col-md-6 offset-md-3">
+        <h3 class="text-center">New Offer</h3>
+        <hr>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-success" value = "Save">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

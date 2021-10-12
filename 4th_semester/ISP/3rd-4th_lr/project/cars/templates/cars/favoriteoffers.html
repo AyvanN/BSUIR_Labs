@@ -1,0 +1,161 @@
+{% extends "cars/base.html" %} 
+{% block styles %}
+<style>
+  .item-title {
+    margin: -2px 0 12px;
+    font-family: "Montserrat", system-ui, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 22px;
+  }
+
+  .item {
+    position: relative;
+    padding: 20px;
+    border-top: 1px solid #f0f4f8;
+  }
+
+  .item-photo {
+    position: relative;
+    box-sizing: border-box;
+    align-self: flex-start;
+    width: 200px;
+  }
+
+  .item-about {
+    display: flex;
+    flex-direction: column;
+    width: 202px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .item-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -2px;
+    font-size: 13px;
+  }
+
+  .item-info-date {
+    color: #777d82;
+    white-space: nowrap;
+  }
+
+  .item-info-location {
+    margin-right: 8px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .item-params {
+    width: 202px;
+    margin-top: -2px;
+    padding-right: 20px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .item-price {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: -2px;
+    text-align: center;
+  }
+
+  .item-controls {
+    position: absolute;
+    top: -7px;
+    right: -5px;
+    display: flex;
+  }
+
+  .item-wrap {
+    position: relative;
+    display: flex;
+  }
+
+  ul {
+    list-style-type: none;
+}
+</style>
+{% endblock %} 
+{% block content %}
+<h1 class="mt-3 mb-3">Favorite Offers</h1>
+{% if offers %}
+<ul class="list-group">
+  {% for offer in offers %}
+  <li class="item">
+    <div class="item-wrap">
+      <div class="item-photo">
+        <a href="{% url 'cars:offer-details' offer.mark offer.model offer.pk %}">
+        <img
+          src="{{ offer.image.url }}"
+          class="img-fluid"
+          width="200"
+          height="150"
+          alt="{{ offer }}"
+        />
+        </a>
+      </div>
+      <div class="item-about">
+        <h3 class="item-title" line>
+          <a href="{% url 'cars:offer-details' offer.mark offer.model offer.pk %}">
+            <span class="link-text">
+              {{ offer.mark }} {{ offer.model }} {{ offer.yaer }}
+            </span>
+          </a>
+        </h3>
+        <div class="item-info">
+          <div class="item-info-location">{{ offer.owner.address }}</div>
+          <div class="item-info-date">{{ offer.statistics.publish_date }}</div>
+        </div>
+      </div>
+      <div class="item-params">
+        <div>{{ offer.year }}</div>
+        <div>
+          Today viewed: {{ offer.statistics.todays_views }}
+        </div>
+        <div>
+          <span>Total viewed: {{ offer.statistics.total_views }}</span>
+        </div>
+      </div>
+      <div class="item-price">
+        <div>{{ offer.price }}$</div>
+      </div>
+      <div class="item-controls">
+        <a href="{% url 'cars:add-favorite' offer.pk %}?next={{ request.path }}">
+        <button class="bookmark" title="Add to Favorites" type="button">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+          {% if not offer in offers %}
+            <path
+              class="stroke"
+              d="M15.5 6h-7c-.274 0-.5.226-.5.5v9.757l3.981-2.661L16 16.269V6.5c0-.274-.226-.5-.5-.5zM7 4h10c.549 0 1 .451 1 1v14.068a.503.503 0 0 1-.777.416L11.984 16l-5.206 3.48A.5.5 0 0 1 6 19.064V5c0-.549.451-1 1-1z"
+            ></path>
+          {% else %}
+            <path
+              class="fill"
+              d="M7 4h10c.549 0 1 .451 1 1v14.068a.505.505 0 0 1-.777.416L11.984 16l-5.206 3.48A.5.5 0 0 1 6 19.064V5c0-.549.451-1 1-1z"
+            ></path>
+          {% endif %}
+          </svg>
+        </button>
+        </a>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<div class="col-md-12" style="margin-top: 30px;">
+  <h3>No favorite offers</h3>
+</div>
+{% endif %}
+{% endblock %}

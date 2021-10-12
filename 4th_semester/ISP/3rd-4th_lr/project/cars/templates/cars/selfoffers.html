@@ -1,0 +1,156 @@
+{% extends "cars/base.html" %} 
+{% block styles %}
+<style>
+  .item-title {
+    margin: -2px 0 12px;
+    font-family: "Montserrat", system-ui, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 22px;
+  }
+
+  .item {
+    position: relative;
+    padding: 20px;
+    border-top: 1px solid #f0f4f8;
+  }
+
+  .item-photo {
+    position: relative;
+    box-sizing: border-box;
+    align-self: flex-start;
+    width: 200px;
+  }
+
+  .item-about {
+    display: flex;
+    flex-direction: column;
+    width: 202px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .item-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -2px;
+    font-size: 13px;
+  }
+
+  .item-info-date {
+    color: #777d82;
+    white-space: nowrap;
+  }
+
+  .item-info-location {
+    margin-right: 8px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .item-params {
+    width: 202px;
+    margin-top: -2px;
+    padding-right: 20px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .item-price {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: -2px;
+    text-align: center;
+  }
+
+  .item-controls {
+    position: absolute;
+    top: -7px;
+    right: -5px;
+    display: flex;
+  }
+
+  .item-wrap {
+    position: relative;
+    display: flex;
+  }
+
+  ul {
+    list-style-type: none;
+}
+</style>
+{% endblock %} 
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+  <div class="container-fluid">
+    <h1 class="nav-item">Your Offers</h1>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a href="{% url 'cars:add-offer' %}?next={{request.path}}">
+                <button class="btn btn-primary" id="sidebarToggle">Add Offer</button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+{% if offers %}
+<ul class="list-group">
+  {% for offer in offers %}
+  <li class="item">
+    <div class="item-wrap">
+      <div class="item-photo">
+        <a href="{% url 'cars:offer-details' offer.mark offer.model offer.pk %}">
+        <img
+          src="{{ offer.image.url }}"
+          class="img-fluid"
+          width="200"
+          height="150"
+          alt="{{ offer }}"
+        />
+        </a>
+      </div>
+      <div class="item-about">
+        <h3 class="item-title" line>
+          <a href="{% url 'cars:offer-details' offer.mark offer.model offer.pk %}">
+            <span class="link-text">
+              {{ offer.mark }} {{ offer.model }} {{ offer.yaer }}
+            </span>
+          </a>
+        </h3>
+        <div class="item-info">
+          <div class="item-info-location">{{ offer.owner.address }}</div>
+          <div class="item-info-date">{{ offer.statistics.publish_date }}</div>
+        </div>
+      </div>
+      <div class="item-params">
+        <div>{{ offer.year }}</div>
+        <div>
+          Today viewed: {{ offer.statistics.todays_views }}
+        </div>
+        <div>
+          <span>Total viewed: {{ offer.statistics.total_views }}</span>
+        </div>
+      </div>
+      <div class="item-price">
+        <div>{{ offer.price }}$</div>
+      </div>
+      <div class="item-controls">
+        <a class="btn btn-primary" href="{% url 'cars:edit-offer' offer.pk %}?next={{request.path}}">Edit</a>
+        <a class="btn btn-danger" href="{% url 'cars:delete' offer.pk %}?next={{request.path}}">Delete</a>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<div class="col-md-12" style="margin-top: 30px;">
+    <h3>Seems like you hasn't added any offers</h3>
+  </div>
+{% endif %}
+{% endblock %}

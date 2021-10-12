@@ -1,0 +1,44 @@
+{% extends "cars/base.html" %}
+
+{% block content %}
+
+<nav aria-label="breadcrumb" class="mt-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'cars:offers' %}">Cars</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'cars:marks' offer.mark %}">{{ offer.mark }}</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'cars:models' offer.mark offer.model %}">{{ offer.model }}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ offer }}</a></li>
+    </ol>
+</nav>
+<div class="col-md-4">
+    Today viewed: {{ offer.statistics.todays_views }}
+</div>
+<div class="col-md-4">
+    Total viewed: {{ offer.statistics.total_views }}
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <img src="{{ offer.image.url }}" class="img-fluid" id="img_id">
+        <script>
+            $(function ()
+{
+    $('#img_id').click(function ()
+    {
+        $(this).attr('width', '5500');
+        $(this).attr('height', '5500');
+    });
+})(django.jQuery);
+        </script>
+    </div>
+    <div class="col-md-4">
+        <h3>{{ offer.mark }} {{ offer.model }}</h3>
+        <p>Year: {{ offer.year }}</p>
+        <p>Price: {{ offer.price }}$</p>
+        <h3>Contact owner:</h3>
+        <p>{{ offer.owner }}</p>
+        <p>{{ offer.owner.phone }}</p>
+    </div>
+    <div class="mt-4">Description: {{ offer.description }}</div>
+</div>
+
+{% endblock content %}
