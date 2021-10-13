@@ -214,6 +214,16 @@ namespace _7th_LR
             return $"{Integer}/{natural}";
         }
 
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
         //Overloading type conversion operations:
         public static implicit operator RationalNumber(string str)
         {
