@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:padding="10dip"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="@string/btn_log_in"
+        android:gravity="center">
+    </TextView>
+    <TextView
+        android:id="@+id/realName"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:padding="10dip"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="@string/log_in_real_name">
+    </TextView>
+    <EditText
+        android:id="@+id/editRealName"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName"/>
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:padding="10dip"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="@string/log_in_user_name">
+    </TextView>
+    <EditText
+        android:id="@+id/editUserName"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName"/>
+
+</LinearLayout>

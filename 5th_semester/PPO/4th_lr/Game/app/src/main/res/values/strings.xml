@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lab4</string>
+    <string name="btn_play">Play</string>
+    <string name="btn_records">Records</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_log_in">Log in</string>
+    <string name="btn_log_out">Log out</string>
+    <string name="log_in_real_name">Real name</string>
+    <string name="log_in_user_name">User name</string>
+    <string name="user_name_exist">This user name already exist</string>
+</resources>
