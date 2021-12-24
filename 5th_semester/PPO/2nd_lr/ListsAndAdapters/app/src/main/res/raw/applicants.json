@@ -1,0 +1,37 @@
+[
+  {
+    "first_name": "Ivan",
+    "second_name": "Shabunia",
+    "patronymic": "Andreevich",
+    "marks": "4,5,6,7,8,9",
+    "address": "Minsk"
+  },
+  {
+    "first_name": "Kirill",
+    "second_name": "Krapivnickiy",
+    "patronymic": "Sergeevich",
+    "marks": "4,5,6,2,9",
+    "address": "Minsk"
+  },
+  {
+    "first_name": "Vladislav",
+    "second_name": "Cherenkevich",
+    "patronymic": "Nikitovich",
+    "marks": "4,5,6,8,9",
+    "address": "Minsk"
+  },
+  {
+    "first_name": "Semen",
+    "second_name": "Zelentsov",
+    "patronymic": "Valerievich",
+    "marks": "4,2,6,6,2",
+    "address": "Gomel"
+  },
+  {
+    "first_name": "Nikolay",
+    "second_name": "Gramadko",
+    "patronymic": "Antonovich",
+    "marks": "4,2,2,6,2",
+    "address": "Minsk"
+  }
+]

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/first_name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="First name"/>
+
+        <EditText
+            android:id="@+id/second_name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Second Name" />
+
+        <EditText
+            android:id="@+id/patronymic_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Patronymic"/>
+
+        <EditText
+            android:id="@+id/address_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"/>
+
+        <EditText
+            android:id="@+id/average_mark_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Average input"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
