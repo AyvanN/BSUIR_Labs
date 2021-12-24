@@ -1,0 +1,73 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.lab3"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+11-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:7:5-76
+11-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:7:22-74
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:8:5-79
+12-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:8:22-77
+13
+14    <application
+14-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:9:5-33:19
+15        android:allowBackup="true"
+15-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:10:9-35
+16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+16-->[androidx.core:core:1.6.0] C:\Users\kusod\gradle-7.0.2\caches\transforms-3\6d0077e63a3149b5ab140bbd0df03b10\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+17        android:debuggable="true"
+18        android:icon="@mipmap/ic_launcher"
+18-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:11:9-43
+19        android:label="Player"
+19-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:12:9-31
+20        android:roundIcon="@mipmap/ic_launcher_round"
+20-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:13:9-54
+21        android:supportsRtl="true"
+21-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:14:9-35
+22        android:testOnly="true"
+23        android:theme="@style/Theme.Lab3" >
+23-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:15:9-42
+24        <activity
+24-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:16:9-18:39
+25            android:name="com.example.lab3.VideoActivity"
+25-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:17:13-42
+26            android:exported="true" />
+26-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:18:13-36
+27        <activity
+27-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:19:9-21:39
+28            android:name="com.example.lab3.AudioActivity"
+28-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:20:13-42
+29            android:exported="true" />
+29-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:21:13-36
+30        <activity
+30-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:22:9-30:20
+31            android:name="com.example.lab3.MainActivity"
+31-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:23:13-41
+32            android:exported="true" >
+32-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:24:13-36
+33            <intent-filter>
+33-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:25:13-29:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:26:17-69
+34-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:26:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:28:17-77
+36-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:28:27-74
+37            </intent-filter>
+38        </activity>
+39
+40        <service android:name="com.example.lab3.NotificationService" />
+40-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:32:9-56
+40-->D:\BSUIR\Studies\Labs fifth sem\PPO\VideoAndMusicPlayer\app\src\main\AndroidManifest.xml:32:18-53
+41    </application>
+42
+43</manifest>

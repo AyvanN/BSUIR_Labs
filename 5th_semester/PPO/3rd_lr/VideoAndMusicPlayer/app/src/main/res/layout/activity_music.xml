@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_img"
+    tools:context=".AudioActivity"
+    android:weightSum="10"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSongName"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="20dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="30dp"
+            android:singleLine="true"
+            android:text="Song Name"
+            android:textAlignment="center"
+            android:textColor="@color/purple_500"
+            android:textSize="25sp"/>
+
+        <ImageView
+
+            android:layout_width="350dp"
+            android:layout_height="240dp"
+            android:src="@drawable/main_icon" />
+
+        <SeekBar
+            android:id="@+id/positionBar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_weight="0.1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1">
+            <TextView
+                android:id="@+id/elapsedTimeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:11"
+                android:layout_marginLeft="55dp"/>
+
+            <TextView
+                android:id="@+id/remainingTimeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-1:11"
+                android:layout_marginLeft="240dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_weight="3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="162dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/playBtn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/play"
+                android:onClick="onClick">
+
+            </Button>
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/playBtn"
+                android:background="@drawable/next"
+                android:onClick="onClick">
+
+            </Button>
+
+            <Button
+                android:id="@+id/btnPrev"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@id/playBtn"
+                android:background="@drawable/prev"
+                android:onClick="onClick"></Button>
+
+            <Button
+                android:id="@+id/btnForward"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/btnNext"
+                android:background="@drawable/forward"
+                android:onClick="onClick"></Button>
+
+            <Button
+                android:id="@+id/btnBackward"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@id/btnPrev"
+                android:background="@drawable/backward"
+                android:onClick="onClick"></Button>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

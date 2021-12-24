@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#9E7BCF</color>
+    <color name="purple_500">#9E7BCF</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#9E7BCF</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#9E7BCF</color>
+    <color name="gray">#d4d3d3</color>
+    <color name="white">#ffffff</color>
+
+    <!-- A transparent black -->
+    <color name="transparent_black">#aa000000</color>
+
+    <!-- selected tab text -->
+    <color name="selected_tabtext">#bb000000</color>
+
+    <!-- non selected tab text -->
+    <color name="unselected_tabtext">#77000000</color>
+    <color name="shuffle_grey">#ffdedede</color>
+    <color name="background_grey">#ffdedede</color>
+
+    <!-- Transparent -->
+    <color name="transparent">#00000000</color>
+
+</resources>
